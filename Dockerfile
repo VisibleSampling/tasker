@@ -1,4 +1,4 @@
-FROM maven:3.5-jdk-8 as BUILD
+FROM maven:ibmjava as BUILD
 
 WORKDIR /usr/src/tasker
 COPY pom.xml .
@@ -7,7 +7,7 @@ RUN mvn verify clean --fail-never
 COPY src ./src
 RUN mvn package -DskipTests=true
 
-FROM java:8-jre
+FROM ibmjava:latest
 
 LABEL maintainer "opsxcq@strm.sh"
 

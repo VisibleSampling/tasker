@@ -2,7 +2,7 @@ version: "2"
 
 services:
     tasker:
-        image: strm/tasker
+        image: tasker-new-00.01
         volumes:
             - "/var/run/docker.sock:/var/run/docker.sock"
         environment:
@@ -22,7 +22,7 @@ services:
                 tasks:
                     docker:
                         - name: hello
-                          image: debian:jessie
+                          image: debian:bookworm
                           script:
                               - echo Hello world from Tasker
                         - name: helloFromPython
