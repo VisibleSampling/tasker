@@ -30,6 +30,6 @@ services:
                           script:
                               - python -c 'print("Hello world from python")'
                         - name: helloFromNode
-                          image: node:8
+                          image: node:lts-slim
                           script:
                               - node -e 'console.log("Hello from node")'
